@@ -20,7 +20,7 @@ function displayEmployee(data, index) {
   var text = JSON.stringify(data);
   var imageHTML = '<div class="avatar"><img class="icon" ';
   var employeeDetailsHTML = '<div class="details"><div class="details-text">'
-  var nameHTML = '<h1>';
+  var nameHTML = '';
   var emailHTML = '<h2>';
   var cityHTML = '<h2 style="text-transform: capitalize;">';
   var phoneHTML = '<h2>';
@@ -30,10 +30,13 @@ function displayEmployee(data, index) {
     if (key == 'large') {
       imageHTML += 'src="' + value + '"></div>';
     } else if (key == 'first') {
-      nameHTML += value + " ";
+      nameHTML += value + ' ';
     } else if (key == 'last') {
-      nameHTML += value + "</h1>";
+      nameHTML += value;
     } else if (key == 'email') {
+      if (value.length >= 32) {
+        emailHTML = '<h2 style="font-size: 0.8em;">';
+      }
       emailHTML += value + "</h2>";
     } else if (key == 'city') {
       cityHTML += value + "</h2>";
@@ -43,6 +46,11 @@ function displayEmployee(data, index) {
       streetHTML += value + "</h2>";
     }
   });
+  if (nameHTML.length >= 17) {
+    nameHTML = '<h1 style="font-size: 1.2em;">' + nameHTML + '</h1>';
+  } else {
+    nameHTML = '<h1>' + nameHTML + '</h1>';
+  }
   var dob = JSON.parse(text).results[0]['dob']['date'];
   dobHTML += "Birthday: " + dob.substring(8, 10) + '/' + dob.substring(5, 7)
           + '/' + dob.substring(2, 4) + "</h3>";
