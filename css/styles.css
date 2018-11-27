@@ -1,0 +1,140 @@
+body {
+  background: #FCFCFC; }
+
+h1 {
+  color: #474747;
+  margin: 70px 0 40px 40px;
+  font-family: "Calibri", sans-serif;
+  font-size: 1.4em;
+  letter-spacing: 1px;
+}
+
+#employee-list {
+  padding-right: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#employee-list > .employee {
+  width: 390px;
+  height: 170px;
+  margin-bottom: 40px;
+  border: 2px solid #E0E0E0;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+
+.employee:hover {
+  cursor: pointer;
+}
+
+.employee .avatar {
+  width: 128px;
+  padding: 21px;
+  float: left;
+  display: inline-block;
+}
+
+.avatar .icon {
+  border-radius: 50%;
+}
+
+.employee .details {
+  width: 215px;
+  height: 174px;
+  font-family: "Calibri", sans-serif;
+  float: left;
+}
+
+.details .details-text {
+  margin-top: 25%;
+}
+
+.details h1 {
+  margin: 0 0 4px 0;
+  color: #444C4F;
+  font-size: 1.4em;
+  text-transform: capitalize;
+}
+
+.details h2 {
+  margin: 2px 0 3px 0;
+  color: #B0B2B1;
+  font-size: 0.9em;
+  font-weight: lighter;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  display: none;
+}
+
+  .overlay .box {
+    width: 310px;
+    height: 440px;
+    margin: auto;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    justify-content: center;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-family: "Calibri", sans-serif;
+  }
+
+    .overlay #button {
+      margin-right: 7px;
+      font-size: 1.5em;
+      float: right;
+      cursor: pointer;
+    }
+
+    .overlay .employee-content {
+      text-align: center;
+    }
+
+      .employee-content .avatar {
+        margin-top: 38px;
+      }
+
+      .employee-content .basic {
+        margin: 20px 0 20px 0;
+      }
+
+        .basic h1 {
+          margin: 20px 0 10px 0;
+          color: #444C4F;
+          font-size: 1.5em;
+          text-transform: capitalize;
+        }
+
+        .basic h2 {
+          margin: 10px 0 10px 0;
+          color: #B0B2B1;
+          font-size: 0.9em;
+          font-weight: lighter;
+        }
+
+      .employee-content p {
+        margin: 10px 20px 10px 20px;
+        border-bottom: 1px solid #DBDDE0;
+      }
+
+      .employee-content .extra {
+        margin-top: 20px;
+      }
+
+        .extra h2 {
+          color: #B0B2B1;
+          font-size: 0.9em;
+          font-weight: lighter;
+          text-transform: capitalize;
+        }
